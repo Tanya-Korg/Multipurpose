@@ -1,0 +1,53 @@
+.header{
+	height: 121px;
+	background-color: $main-color;
+	padding-top: 17px;
+	color: $font-color1;
+}
+.header__logo{
+	width: 181px;
+	padding: 0;
+}
+.header__controls{
+	display: flex;
+	color: $font-color1;
+	font-size: 15px;
+	margin-bottom: 20px;
+}
+.controls__item{
+	margin: 0 16px;
+	position: relative;
+}
+.controls__item::before{
+	content: '|';
+	display: block;
+	position: absolute;
+	top: 0px;
+	right: -16px;
+}
+.header__form{
+	height: 43px;
+}
+.form__search,
+.form__btn{
+	height: 100%;
+	padding: 10px 22px;
+}
+.form__search{
+	border-radius: 5px 0 0 5px;
+	outline: none;
+}
+.form__btn{
+	background-color: $main-color2;
+	border-radius: 0 5px 5px 0;
+}
+.basket__btn{
+	width: 40px;
+	height: 40px;
+	background-color: $main-color2;
+	border-radius: 50%;
+}
+.basket__price{
+	text-transform: uppercase;
+	font-size: 14px;
+}

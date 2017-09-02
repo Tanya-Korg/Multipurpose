@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/fonts.css">
+	<link rel="stylesheet" href="js/slick/slick/slick.css">
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/media.css">
+
+
+</head>
+
+<body>
+
+	<!--HEADER-->
+	<header class="header">
+		<div class="container">
+		
+			<img src="img/logo.png" alt="LOGO" class="header__logo col-md-2">
+			
+			<div class="row col-md-10">
+				<div class="header__controls  col-md-offset-5 col-md-8 col-lg-offset-6 col-lg-6">
+					<div class="controls__item">My Account</div>
+					<div class="controls__item">Wishlist</div>
+					<div class="controls__item">My Cart</div>
+					<div class="controls__item">Checout</div>
+					<div class="controls__item">Login</div>
+				</div>
+
+
+				<form action="" class="header__form col-md-offset-2 col-md-8">
+					<input type="search" name="search" class="form__search col-md-10" placeholder="Search here...">
+					<button class="form__btn col-md-2"></button>
+				</form>
+
+				<div class="header__basket col-md-2">
+					<div class="basket__btn col-md-6"></div>
+					<span class="basket__price col-md-6">Total <b>$600.00</b></span>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<!--	NAV-->
+	<nav class="hamburger">
+		<div class="hamburger__item">Clothing</div>
+		<div class="hamburger__item">Electronics</div>
+		<div class="hamburger__item">Shoes</div>
+		<div class="hamburger__item">Watches</div>
+		<div class="hamburger__item">Jewellery</div>
+		<div class="hamburger__item">Health and Beauty</div>
+		<div class="hamburger__item">Kids and Babies</div>
+		<div class="hamburger__item">Sports</div>
+		<div class="hamburger__item">Home and Garden</div>
+	</nav>
+
+	<!--BANNER-->
+	<div class="banner">
+		<h1 class="banner__h1">Collection 2016</h1>
+		<span class="banner__span">Sale 50% for First purchase</span>
+		<button class="banner__button">Shop now</button>
+		<div class="banner__desc">
+			<div class="desc__item">
+				<span class="item__title">Money back</span>
+				<span class="item__text">30 Days Money BackGuarantee</span>
+			</div>
+			<div class="desc__item">
+				<span class="item__title">Free shipping</span>
+				<span class="item__text">Shipping on orders over$99</span>
+			</div>
+			<div class="desc__item">
+				<span class="item__title">Special sale</span>
+				<span class="item__text">Extra $5 off on all items</span>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<!--	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7/jquery.min.js"></script>-->
+	<!--
+
+	<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+-->
+	<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+	<!--	WOW ANIMATE-->
+	<script>
+		if (document.body.clientWidth > 600) {
+			document.write('<script src="js/wow.min.js"><\/script>');
+		}
+
+	</script>
+
+	<script>
+		new WOW().init();
+
+	</script>
+
+	<!--	NAV SCROLLING-->
+	<script>
+		$(document).ready(function() {
+
+			$('div#site-navigation a').click(function(evt) {
+				evt.preventDefault();
+				$('html, body').stop().animate({
+					scrollTop: $($(this).attr('href')).offset().top
+				}, 1000);
+			});
+
+		});
+
+	</script>
+
+	<!--NAV HIDDEN-->
+	<script>
+		$(".nav__humburger").click(function() {
+			$(".sec1__navPannel_wrapper").toggleClass("header__nav_open");
+		});
+
+		$(document).mouseup(function(e) {
+			var $target = $(e.target);
+			if ($target.closest(".sec1__navPannel_wrapper").length == 0 && $target.closest(".nav__humburger").length == 0) {
+				$(".sec1__navPannel_wrapper").removeClass("header__nav_open");
+			}
+		});
+
+	</script>
+</body>
+
+</html>
